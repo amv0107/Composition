@@ -9,3 +9,5 @@ Project is created with:
 * Navigation
 * DataBinding
 
+## Screenshots
+![](/screen/screen_1.png)![](/screen/screen_2.png)![](/screen/screen_3.png)![](/screen/screen_4.png)
