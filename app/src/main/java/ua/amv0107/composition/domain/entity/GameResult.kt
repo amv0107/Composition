@@ -10,4 +10,7 @@ data class GameResult(
     val countOfRightAnswers: Int,   // кол-во правильных ответов
     val countOfQuestions: Int,      // общее кол-во вопросов на которые ответи пользователь
     val gameSettings: GameSettings  // настройки игры
-): Parcelable
+) : Parcelable {
+    val countOfRightAnswersString: String
+        get() = countOfRightAnswers.toString()
+}
