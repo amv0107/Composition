@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.FragmentManager
+import androidx.navigation.fragment.findNavController
 import ua.amv0107.composition.R
 import ua.amv0107.composition.databinding.FragmentGameFinishedBinding
 import ua.amv0107.composition.domain.entity.GameResult
@@ -78,15 +79,7 @@ class GameFinishedFragment : Fragment() {
     }
 
     private fun setupClickListeners() {
-        // В фрагменте устанавливаем слушатель на кнопку назад
-        requireActivity().onBackPressedDispatcher.addCallback(
-            viewLifecycleOwner,
-            object : OnBackPressedCallback(true) {
-                override fun handleOnBackPressed() {
-                    retryGame()
-                }
-            }
-        )
+
         binding.buttonRetry.setOnClickListener {
             retryGame()
         }
@@ -104,15 +97,12 @@ class GameFinishedFragment : Fragment() {
     }
 
     private fun retryGame() {
-        requireActivity().supportFragmentManager.popBackStack(
-            GameFragment.NAME,
-            FragmentManager.POP_BACK_STACK_INCLUSIVE
-        )
+        findNavController().popBackStack()
     }
 
     companion object {
 
-        private const val KEY_GAME_RESULT = "game_result"
+        const val KEY_GAME_RESULT = "game_result"
 
         fun newInstance(gameResult: GameResult): GameFinishedFragment {
             return GameFinishedFragment().apply {
