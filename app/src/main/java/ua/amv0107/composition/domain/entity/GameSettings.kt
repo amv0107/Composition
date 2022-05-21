@@ -10,4 +10,10 @@ data class GameSettings(
     val minCountOfRightAnswer: Int,     // Минимальное кол-во правильных ответов
     val minPercentOfRightAnswer: Int,   // минимальный процент правильных ответов
     val gameTimeInSeconds: Int          // вемя игры в секундах
-): Parcelable
+) : Parcelable {
+    val minCountOfRightAnswerString: String
+        get() = minCountOfRightAnswer.toString()
+
+    val minPercentOfRightAnswerString: String
+        get() = minPercentOfRightAnswer.toString()
+}
