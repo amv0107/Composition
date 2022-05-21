@@ -1,7 +1,9 @@
 # Composition
 
-##Kotlin
-##MVVM
-##LiveData
-##Navigation
-##DataBinding
+## Technologies
+Project is created with:
+*Kotlin
+*MVVM
+*LiveData
+*Navigation
+*DataBinding
