@@ -1,5 +1,5 @@
 # Composition
-[Based on the course "Android professional level"](https://www.udemy.com/course/android_prof/)
+[Based on the course "Android professional level" -> Section 7. Android Jetpack](https://www.udemy.com/course/android_prof/)
 
 ## Used Technologies
 Project is created with:
