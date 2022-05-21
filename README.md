@@ -2,8 +2,8 @@
 
 ## Technologies
 Project is created with:
-*Kotlin
-*MVVM
-*LiveData
-*Navigation
-*DataBinding
+* Kotlin
+* MVVM
+* LiveData
+* Navigation
+* DataBinding
