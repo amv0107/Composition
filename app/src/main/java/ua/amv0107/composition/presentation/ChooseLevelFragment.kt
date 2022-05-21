@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import ua.amv0107.composition.R
 import ua.amv0107.composition.databinding.FragmentChooseLevelBinding
 import ua.amv0107.composition.databinding.FragmentGameFinishedBinding
@@ -42,10 +43,10 @@ class ChooseLevelFragment : Fragment() {
     }
 
     private fun launchGameFragment(level: Level){
-        requireActivity().supportFragmentManager.beginTransaction()
-            .replace(R.id.main_container, GameFragment.newInstance(level))
-            .addToBackStack(GameFragment.NAME)
-            .commit()
+        val args = Bundle().apply {
+            putParcelable(GameFragment.KEY_LEVEL, level)
+        }
+       findNavController().navigate(R.id.action_chooseLevelFragment2_to_gameFragment2, args)
     }
 
     override fun onDestroy() {
